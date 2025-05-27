@@ -4,7 +4,7 @@ import logging
 
 import Ice
 
-from calculator.calculator import Calculator
+from calculator import Calculator
 
 
 class Server(Ice.Application):
@@ -15,7 +15,7 @@ class Server(Ice.Application):
         super().__init__()
         self.logger = logging.getLogger(__file__)
 
-    def run(self, args: list[str]) -> int:
+    def run(self, args):
         """Execute the main server actions..
 
         It will initialise the needed middleware elements in order to execute the server.
